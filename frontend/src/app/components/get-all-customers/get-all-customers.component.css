@@ -1,0 +1,44 @@
+/* Container para alinhar botão e tabela */
+.table-container {
+  width: 80%;
+  margin: 20px auto 0 auto;
+}
+
+/* Botão */
+.btn-new {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 10px;
+  background-color: #654ea3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-new:hover {
+  background-color: #503d9e;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* colunas com largura fixa */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 25%; /* todas as colunas iguais */
+}
+
+/* Cabeçalho */
+th {
+  background-color: #654ea3;
+  color: #fff;
+}

@@ -2,30 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { CustomerService } from '../../service/customer.service';
 
 @Component({
   selector: 'app-post-customer',
   standalone: true,
   imports: [
-    CommonModule,        // Import for *ngIf, *ngFor, etc
-    ReactiveFormsModule, // Reactive Forms module
-    HttpClientModule     // HttpClient module for API requests
+    CommonModule,        // *ngIf, *ngFor, etc
+    ReactiveFormsModule, // Reactive Forms
+    HttpClientModule     // Http requests
   ],
   templateUrl: './post-customer.component.html',
   styleUrls: ['./post-customer.component.css']
 })
 export class PostCustomerComponent implements OnInit {
 
-  // Form group to hold customer form data
   postCustomerForm!: FormGroup;
 
   constructor(
-    private customerService: CustomerService, // service to handle HTTP requests
-    private fb: FormBuilder                   // form builder for reactive forms
+    private customerService: CustomerService,
+    private fb: FormBuilder,
+    private router: Router
   ) {}
 
-  // Initialize the form when the component loads
   ngOnInit() {
     this.postCustomerForm = this.fb.group({
       name: [null, [Validators.required, Validators.minLength(3)]],
@@ -34,18 +34,20 @@ export class PostCustomerComponent implements OnInit {
     });
   }
 
-  // Method to submit customer data to the backend
   postCustomer() {
     if (this.postCustomerForm.valid) {
       this.customerService.postCustomer(this.postCustomerForm.value).subscribe({
         next: (res) => {
           console.log('Customer added successfully!', res);
-          alert('Customer added successfully!');  // show a message to the user
-          this.postCustomerForm.reset();          // reset the form after submission
+          alert('Customer added successfully!');
+          this.postCustomerForm.reset();
+
+          // Go to the list of customers after successful addition
+          this.router.navigateByUrl('/');
         },
         error: (err) => {
           console.error('Error adding customer:', err);
-          alert('Failed to add customer. Please try again.'); // show error message
+          alert('Failed to add customer. Please try again.');
         }
       });
     } else {
