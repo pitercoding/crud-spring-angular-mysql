@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomerService } from '../../service/customer.service';
@@ -7,8 +8,9 @@ import { CustomerService } from '../../service/customer.service';
   selector: 'app-post-customer',
   standalone: true,
   imports: [
-    ReactiveFormsModule,  // Reactive Forms module
-    HttpClientModule      // HttpClient module for API requests
+    CommonModule,        // Import for *ngIf, *ngFor, etc
+    ReactiveFormsModule, // Reactive Forms module
+    HttpClientModule     // HttpClient module for API requests
   ],
   templateUrl: './post-customer.component.html',
   styleUrls: ['./post-customer.component.css']

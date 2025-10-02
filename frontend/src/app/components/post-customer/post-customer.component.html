@@ -4,15 +4,15 @@
     <form [formGroup]="postCustomerForm" (ngSubmit)="postCustomer()">
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required formControlName="name"/>
+        <input type="text" id="name" required formControlName="name"/>
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required formControlName="email" />
+        <input type="email" id="email" required formControlName="email" />
       </div>
       <div class="form-group">
         <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone" required formControlName="phone"/>
+        <input type="text" id="phone" required formControlName="phone"/>
       </div>
       <button type="submit">Post</button>
     </form>

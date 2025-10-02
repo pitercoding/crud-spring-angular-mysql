@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-get-all-customers',
+  standalone: true,
   imports: [],
   templateUrl: './get-all-customers.html',
-  styleUrl: './get-all-customers.css'
+  styleUrls: ['./get-all-customers.css']
 })
-export class GetAllCustomers {
-
-}
+export class GetAllCustomers {}
