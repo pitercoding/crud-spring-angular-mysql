@@ -1,30 +1,39 @@
-/* Container para alinhar botão e tabela */
+/* Container to align buttons and table */
 .table-container {
   width: 80%;
   margin: 20px auto 0 auto;
 }
 
-/* Botão */
-.btn-new {
+/* Buttons */
+.btn-new, .btn-update {
   display: inline-block;
   margin-bottom: 15px;
   padding: 8px 10px;
-  background-color: #654ea3;
+  background-color: #503d9e;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.btn-new:hover {
-  background-color: #503d9e;
+.btn-update {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 20px;
+  font-size: 14px;
+  min-width: 100px;
 }
 
-/* Tabela */
+.btn-new:hover, .btn-update:hover {
+  background-color: #fff;
+  color: #503d9e;
+}
+
+/* Table*/
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* colunas com largura fixa */
+  table-layout: fixed;
 }
 
 th, td {
@@ -34,11 +43,12 @@ th, td {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 25%; /* todas as colunas iguais */
+  width: 25%;
 }
 
-/* Cabeçalho */
+/* Head */
 th {
   background-color: #654ea3;
   color: #fff;
+  text-align: center;
 }
