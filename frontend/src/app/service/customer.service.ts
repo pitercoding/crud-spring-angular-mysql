@@ -12,18 +12,28 @@ export class CustomerService {
 
   constructor(private http: HttpClient) {}
 
-  // To send customer data as a POST request to the backend
+  // POST - create new customer //
   postCustomer(customer: Customer): Observable<Customer> {
     return this.http.post<Customer>(`${BASE_URL}/api/customer`, customer);
   }
 
-  // To get customers data from backend
+  // GET - all customers //
   getAllCustomer(): Observable<any> {
     return this.http.get(BASE_URL + "/api/customers");
   }
 
-  // To get customers by id from backend
+  // GET by ID //
   getCustomerById(id: number): Observable<any> {
     return this.http.get(BASE_URL + "/api/customer/" + id);
+  }
+
+   // UPDATE - by ID //
+  updateCustomer(id: number, customer: any): Observable<any> {
+    return this.http.put(BASE_URL + "/api/customer/" + id, customer);
+  }
+
+  // DELETE - by ID //
+  deleteCustomer(id: number): Observable<any> {
+    return this.http.delete(BASE_URL + "/api/customer/" + id);
   }
 }

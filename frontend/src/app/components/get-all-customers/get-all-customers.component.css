@@ -5,7 +5,7 @@
 }
 
 /* Buttons */
-.btn-new, .btn-update {
+.btn-new, .btn-update, .btn-delete {
   display: inline-block;
   margin-bottom: 15px;
   padding: 8px 10px;
@@ -16,15 +16,15 @@
   cursor: pointer;
 }
 
-.btn-update {
+.btn-update, .btn-delete {
   display: block;
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 8px 20px;
   font-size: 14px;
   min-width: 100px;
 }
 
-.btn-new:hover, .btn-update:hover {
+.btn-new:hover, .btn-update:hover, .btn-delete:hover {
   background-color: #fff;
   color: #503d9e;
 }
