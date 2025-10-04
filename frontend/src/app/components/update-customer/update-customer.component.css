@@ -3,16 +3,16 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: auto;
 }
 
 .form-container {
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 280px;
   padding: 20px;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -20,25 +20,30 @@
 }
 
 .form-title {
-  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
+  color: #654ea3;
+  text-decoration: underline;
 }
 
 label {
+  font-weight: 500;
+  margin-bottom: 2px;
   display: block;
-  font-weight: bold;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
   box-sizing: border-box;
+  font-size: 14px;
 }
 
 button {
@@ -46,12 +51,13 @@ button {
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
   display: block;
   margin: 20px auto;
   align-items: center;
+  transition: all 0.2s ease;
 }
 
 button:hover {
