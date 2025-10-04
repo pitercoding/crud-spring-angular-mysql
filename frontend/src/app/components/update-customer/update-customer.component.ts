@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CustomerService } from '../../service/customer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-customer',
@@ -20,7 +21,8 @@ export class UpdateCustomerComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private service: CustomerService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -63,4 +65,21 @@ export class UpdateCustomerComponent implements OnInit {
       }
     });
   }
+
+  updateCustomer() {
+    this.service.updateCustomer(this.id, this.updateCustomerForm.value).subscribe({
+      next: (res) => {
+        console.log('Customer updated successfully:', res);
+        alert('Customer updated successfully');
+
+        // Go to the list of customers after successful update
+          this.router.navigate(['/']);
+      },
+      error: (err) => {
+        console.error('Error updating customer:', err);
+        alert('Failed to update customer');
+      }
+    });
+  }
+
 }

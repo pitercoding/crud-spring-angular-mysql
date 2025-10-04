@@ -1,7 +1,7 @@
 <div class="container">
   <div class="form-container">
     <h2 class="form-title">Update Customer</h2>
-    <form [formGroup]="updateCustomerForm">
+    <form [formGroup]="updateCustomerForm" (ngSubmit)="updateCustomer()">
       <div class="form-group">
         <label for="name">Name:</label>
         <input type="text" id="name" required formControlName="name"/>
@@ -14,7 +14,7 @@
         <label for="phone">Phone:</label>
         <input type="text" id="phone" required formControlName="phone"/>
       </div>
-      <button type="submit">Update</button>
+      <button type="submit" [disabled]="updateCustomerForm.invalid">Update</button>
     </form>
   </div>
 </div>
