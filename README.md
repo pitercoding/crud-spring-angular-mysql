@@ -57,6 +57,27 @@ customer-manager-app/
 | **Testes & APIs** | 🧪 Postman, ✅ HttpClientTestingModule |
 | **IDE & Ferramentas** | 🧰 IntelliJ IDEA, 🧩 VSCode |
 
+## 📷 Capturas de Tela
+
+### 1. Criar Cliente (Post)
+<img src="https://github.com/user-attachments/assets/57793174-c20f-4df3-80ac-ae48070fe465" alt="Post" width="600">
+
+### 2. Listar Clientes (Get)
+<img src="https://github.com/user-attachments/assets/d35bbdcb-ab19-4795-9f1f-16fd246d94c1" alt="get-all" width="600">
+
+### 3. Atualizar Cliente (Update)
+<img src="https://github.com/user-attachments/assets/463b466b-c02b-40d9-9754-2340d46e0dc1" alt="update" width="600">
+
+### 4. Deletar Cliente (Delete)
+<img src="https://github.com/user-attachments/assets/f93245b6-0efe-4892-8eda-97cb9e65dd41" alt="delete" width="600">
+
+### 5. Banco de Dados MySQL
+<img src="https://github.com/user-attachments/assets/0c2a1809-54c5-48ff-99a3-03ed4b7d2f1c" alt="mysql" width="600">
+
+### 6. Postman Request
+<img src="https://github.com/user-attachments/assets/c9e0d9e1-edeb-4638-8342-8559fb60431c" alt="postman" width="600">
+
+
 ## 🚀 **Como rodar o projeto**
 
 ### 🔧 **Pré-requisitos**
@@ -175,3 +196,4 @@ Desenvolvedor Full Stack em formação.
 📧 **Email:** [piterg.bio@gmail.com](mailto:piterg.bio@gmail.com)  
 💼 **LinkedIn:** [linkedin.com/in/piter-gomes-4a39281a1](https://www.linkedin.com/in/piter-gomes-4a39281a1/)  
 🌐 **Portfólio:** [my-portfolio-flame-mu-xxis8wes4p.vercel.app](https://my-portfolio-flame-mu-xxis8wes4p.vercel.app/)
+
